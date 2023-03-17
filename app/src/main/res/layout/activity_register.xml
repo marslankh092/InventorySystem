@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Screens.RegisterActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ToolBarStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edFirstName"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="FirstName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_toolbar">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TedFirstName"
+                android:layout_width="match_parent"
+                android:ems="13"
+                android:inputType="textPersonName"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edLastName"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="LastName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintEnd_toEndOf="@+id/edFirstName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edFirstName"
+            app:layout_constraintTop_toBottomOf="@+id/edFirstName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TedLastName"
+                android:layout_width="match_parent"
+                android:ems="13"
+                android:inputType="textPersonName"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edAccountUsername"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintEnd_toEndOf="@+id/edFirstName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edFirstName"
+            app:layout_constraintTop_toBottomOf="@+id/edLastName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TedAccountUsername"
+                android:layout_width="match_parent"
+                android:ems="13"
+                android:inputType="textPersonName"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edAccountPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+
+            android:hint="Password"
+            app:endIconMode="password_toggle"
+            app:layout_constraintEnd_toEndOf="@+id/edFirstName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edFirstName"
+            app:layout_constraintTop_toBottomOf="@+id/edAccountUsername">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TedAccountPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="13"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnCreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="submit"
+            app:layout_constraintBaseline_toBaselineOf="@+id/checkBoxAdmin"
+            app:layout_constraintEnd_toEndOf="@+id/edAccountPassword"
+            app:layout_constraintHorizontal_bias="0.423"
+            app:layout_constraintStart_toEndOf="@+id/checkBoxAdmin" />
+
+        <CheckBox
+            android:id="@+id/checkBoxAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="28dp"
+            android:text="Admin"
+            app:layout_constraintStart_toStartOf="@+id/edAccountPassword"
+            app:layout_constraintTop_toBottomOf="@+id/edAccountPassword" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:indeterminate="true"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
